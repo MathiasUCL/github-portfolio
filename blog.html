@@ -1,0 +1,123 @@
+<!-- 
+  Hello 😊.
+
+  This template is designed and developed by Nisar Hassan Naqvi
+  for anyone to use for free or customize the way they like.
+
+  Github Repo: https://github.com/nisarhassan12/portfolio-template/
+  My Website: https://nisar.dev
+
+  For business & inquires, contact me => syednisarhassan12@gmail.com
+-->
+
+<!--
+  Follow the instructions written in comments to create your stunning portfolio
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Mathias Graugaard Nielsen | Datamatiker based in Aalborg, Denmark.
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Mathias Graugaard Nielsen, C#" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Blog for project game</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>A game development project, about creating a action roguelite for a school project.</p>
+      </div>
+    </div>
+  </header>
+
+ 
+
+
+  <main role="main">
+      <section class="blog" id="blog">
+          <div class="row">
+              <h2>My Blog</h2>
+              <div class="blog__posts">
+                  {% for post in site.posts %}
+                  <article class="blog__post">
+                      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                      <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+                  </article>
+                  {% endfor %}
+              </div>
+          </div>
+      </section>
+  </main>
+                             
+
+
+  
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/MathiasUCL" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href=https://www.linkedin.com/in/mathiasgraugaardnielsen/">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
