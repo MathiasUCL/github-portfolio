@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Devlog #2 – Getting Started"
+title: "Devlog #2 – Portfolio and blog"
 date: 2025-08-20
 ---
 I spent today properly setting up my portfolio and the blog for this project. So that I'm able to create

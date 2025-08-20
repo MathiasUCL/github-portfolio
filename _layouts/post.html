@@ -1,0 +1,83 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}" />
+
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="Mathias Graugaard Nielsen, C#" />
+    <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}" />
+</head>
+
+<body>
+
+    <!-- ***** Header ***** -->
+    <header class="header" role="banner" id="top">
+        <div class="row">
+            <nav class="nav" role="navigation">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="{{ '/' | relative_url }}" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__text-box row">
+            <div class="header__text">
+                <h1 class="heading-primary"><span>{{ page.title }}</span></h1>
+                <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ***** Blog Post Content ***** -->
+    <main role="main">
+        <section class="blog" id="blog">
+            <div class="row">
+                <article class="blog__post">
+                    {{ content }}
+                </article>
+                <p><a href="{{ '/blog/' | relative_url }}">&larr; Back to Blog</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ***** Footer ***** -->
+    <footer role="contentinfo" class="footer">
+        <div class="row">
+            <ul class="footer__social-links">
+                <li class="footer__social-link-item">
+                    <a href="https://github.com/MathiasUCL" title="Link to Github Profile">
+                        <img src="{{ '/images/github.svg' | relative_url }}" class="footer__social-image" alt="Github">
+                    </a>
+                </li>
+                <li class="footer__social-link-item">
+                    <a href="https://www.linkedin.com/in/mathiasgraugaardnielsen/">
+                        <img src="{{ '/images/linkedin.svg' | relative_url }}" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+                    </a>
+                </li>
+            </ul>
+            <p>&copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" title="Back to Top">
+        <img src="{{ '/images/arrow-up.svg' | relative_url }}" alt="Back to Top" class="back-to-top__image" />
+    </a>
+
+    <script src="{{ '/index.js' | relative_url }}"></script>
+</body>
+</html>
