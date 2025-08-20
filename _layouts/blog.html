@@ -13,14 +13,11 @@
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
     <!-- Put your site title here -->
-    <title>
-        Mathias Graugaard Nielsen | Datamatiker based in Aalborg, Denmark.
-    </title>
+    <title>{{ page.title }} | {{ site.title }}</title>
 
-    <meta name="description" content="Add small description of yourslef.">
-    <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+    <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="Mathias Graugaard Nielsen, C#" />
-    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}" />
 </head>
 
 <body>
@@ -32,19 +29,18 @@
             <nav class="nav" role="navigation">
                 <ul class="nav__items">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link">Portfolio</a>
+                        <a href="{{ '/' | relative_url }}" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="header__text-box row">
             <div class="header__text">
-                <h1 class="heading-primary">
-                    <!-- Replace the following name with your name -->
-                    <span>Blog for project game</span>
-                </h1>
-                <!-- Put a small paragraph about yourself -->
-                <p>A game development project, about creating a action roguelite for a school project.</p>
+                <h1 class="heading-primary"><span>{{ page.title }}</span></h1>
+                <p>A game development project, about creating an action roguelite for a school project.</p>
             </div>
         </div>
     </header>
@@ -69,7 +65,6 @@
         </section>
     </main>
 
-    <script src="./index.js"></script>
+    <script src="{{ '/index.js' | relative_url }}"></script>
 </body>
-
 </html>
