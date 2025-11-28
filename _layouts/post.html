@@ -1,83 +1,141 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}" />
 
-    <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
 
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="Mathias Graugaard Nielsen, C#" />
-    <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}" />
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 150 }}">
+  <meta name="keywords" content="Mathias Graugaard Nielsen, Blog, Devlog" />
+
+  <!-- Your existing blog styling -->
+  <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}" />
+
+  <!-- Syntax highlighting (GitHub Pages built-in) -->
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+  <style>
+    /* --- Better Blog Post Formatting --- */
+
+    .blog__post {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .blog__post img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      display: block;
+    }
+
+    .blog__post pre {
+      background: #1e1e1e;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow: auto;
+      margin: 1.5rem 0;
+    }
+
+    .blog__post code {
+      background: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .blog__post pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.95rem;
+    }
+
+    .blog__post blockquote {
+      border-left: 4px solid #ff4d94;
+      padding-left: 1rem;
+      margin-left: 0;
+      color: #555;
+      font-style: italic;
+    }
+
+    .back-link {
+      margin-top: 2rem;
+      display: inline-block;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #ff4d94;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ***** Header ***** -->
-    <header class="header" role="banner" id="top">
-        <div class="row">
-            <nav class="nav" role="navigation">
-                <ul class="nav__items">
-                    <li class="nav__item">
-                        <a href="{{ '/' | relative_url }}" class="nav__link">Portfolio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__text-box row">
-            <div class="header__text">
-                <h1 class="heading-primary"><span>{{ page.title }}</span></h1>
-                <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
-            </div>
-        </div>
-    </header>
+  <!-- ***** Header ***** -->
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="{{ '/' | relative_url }}" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <!-- ***** Blog Post Content ***** -->
-    <main role="main">
-        <section class="blog" id="blog">
-            <div class="row">
-                <article class="blog__post">
-                    {{ content }}
-                </article>
-                <p><a href="{{ '/blog/' | relative_url }}">&larr; Back to Blog</a></p>
-            </div>
-        </section>
-    </main>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary"><span>{{ page.title }}</span></h1>
+        <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+      </div>
+    </div>
+  </header>
 
-    <!-- ***** Footer ***** -->
-    <footer role="contentinfo" class="footer">
-        <div class="row">
-            <ul class="footer__social-links">
-                <li class="footer__social-link-item">
-                    <a href="https://github.com/MathiasUCL" title="Link to Github Profile">
-                        <img src="{{ '/images/github.svg' | relative_url }}" class="footer__social-image" alt="Github">
-                    </a>
-                </li>
-                <li class="footer__social-link-item">
-                    <a href="https://www.linkedin.com/in/mathiasgraugaardnielsen/">
-                        <img src="{{ '/images/linkedin.svg' | relative_url }}" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-                    </a>
-                </li>
-            </ul>
-            <p>&copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.</p>
-        </div>
-    </footer>
+  <!-- ***** Blog Post Content ***** -->
+  <main role="main">
+    <section class="blog" id="blog">
+      <div class="row">
+        <article class="blog__post">
+          {{ content }}
+        </article>
 
-    <a href="#top" class="back-to-top" title="Back to Top">
-        <img src="{{ '/images/arrow-up.svg' | relative_url }}" alt="Back to Top" class="back-to-top__image" />
-    </a>
+        <a class="back-link" href="{{ '/blog/' | relative_url }}">&larr; Back to Blog</a>
+      </div>
+    </section>
+  </main>
 
-    <script src="{{ '/index.js' | relative_url }}"></script>
+  <!-- ***** Footer ***** -->
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/MathiasUCL">
+            <img src="{{ '/images/github.svg' | relative_url }}" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/mathiasgraugaardnielsen/">
+            <img src="{{ '/images/linkedin.svg' | relative_url }}" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+      <p>&copy; 2020 - Template designed & developed by <a href="https://nisar.dev">Nisar</a>.</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="{{ '/images/arrow-up.svg' | relative_url }}" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+
+  <script src="{{ '/index.js' | relative_url }}"></script>
+
 </body>
 </html>
