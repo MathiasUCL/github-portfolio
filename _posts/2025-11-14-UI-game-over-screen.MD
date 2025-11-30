@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Devlog #11 – UI - Game over screen"
-date: 2025-11-24
+date: 2025-11-14
 ---
 
 Created a Game over screen for when the player dies, this screen pauses the game and pops up once the players health reaches 0.
