@@ -57,7 +57,6 @@
                     <article class="blog__post">
                         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                         <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-                        <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
                     </article>
                     {% endfor %}
                 </div>
