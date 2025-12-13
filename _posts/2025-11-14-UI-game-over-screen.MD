@@ -25,3 +25,6 @@ This could cause issues in the future, if we decided to create more levels, howe
 since we do not have the time to implement this.
 
 Once this was fixed the game loop worked as it should and the UI is working as intended.
+
+
+![Enemy movement code](/github-portfolio/images/blog/GameOver.PNG)

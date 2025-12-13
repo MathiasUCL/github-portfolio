@@ -27,3 +27,14 @@ outside of walking in general.
 Creating the drop script was a lot simpler and straight forward, reusing a lot of earlier functionality, I was able to quite easily scale
 the experience dropped with the time and changing experience dropped based on the enemy prefab. The drops outside of experience still needs 
 more work, however the primary functionality is there and just needs to be changed to fit the type of drops, we decide to use for our game.
+
+![Enemy movement code](/github-portfolio/images/blog/RangedEnemyUpdate.PNG)
+
+
+![Enemy movement code](/github-portfolio/images/blog/RangedEnemyMovement.PNG)
+
+
+![Enemy movement code](/github-portfolio/images/blog/RangedAttack.PNG)
+
+
+![Enemy movement code](/github-portfolio/images/blog/DropScript.PNG)

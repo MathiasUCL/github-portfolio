@@ -23,3 +23,5 @@ I realized that image/asset generation using AI, was a lot more challenging than
 specific generations. Since the AI was not great at following directions, with what to generate or change on the generated images.
 
 
+![Enemy movement code](/github-portfolio/images/blog/MainMenu.PNG)
+
