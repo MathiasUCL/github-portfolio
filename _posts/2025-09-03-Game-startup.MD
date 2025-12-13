@@ -14,3 +14,6 @@ The work has been going great this week so far, as I've had a great start to cre
 game. I've learnt a lot about using Unity and how different individuel parts of the game comes together
 to form a game. I'll be finishing up some touches on the basic enemy and move more into creating some
 slightly more advanced features, in making the player able to hit and have weapons apply effects.
+
+
+![Enemy movement code](/github-portfolio/images/blog/EnemyMovement)
