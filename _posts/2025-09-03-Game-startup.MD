@@ -16,4 +16,4 @@ to form a game. I'll be finishing up some touches on the basic enemy and move mo
 slightly more advanced features, in making the player able to hit and have weapons apply effects.
 
 
-![Enemy movement code](/github-portfolio/images/blog/EnemyMovement)
+![Enemy movement code](/github-portfolio/images/blog/EnemyMovement.PNG)
