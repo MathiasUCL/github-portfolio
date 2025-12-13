@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Devlog #8 – Player upgrades cards and pause screen"
+title: "Devlog #8 – Player upgrade cards and pause screen"
 date: 2025-09-26
 ---
 The goal since the last devlog has been to make a screen pop up with selectable upgrades for the player, when they level up.
@@ -30,3 +30,30 @@ All in all this was a huge new functionality that was very difficult to create, 
 and the UI elements of this task. And the end result is not very satisfactory yet, especially the UI part, since there are a lot of
 issues with streching the cards, which then streches the text, making it hard to read. This function needs to be looked at and improved 
 upon again later on in the process, if the timeframe allows for this.
+
+![Enemy movement code](/github-portfolio/images/blog/UpgradeCards.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/UpgradeCardData.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/LevelupCard.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/RandomCard.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/SetupCard.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/CardRarity.PNG)
+
+
+
+![Enemy movement code](/github-portfolio/images/blog/SelectCard.PNG)
+

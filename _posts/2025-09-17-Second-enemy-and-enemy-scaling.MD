@@ -26,3 +26,9 @@ I am however a bit worried about the way the enemies are randomly selected for s
 game process. If there will be very rare enemies, you could potentially get very unlucky and spawn 2 very hard enemies at once.
 However this also makes it so every game isn't the same, so I'm still reflecting upon if this is a problem or not and will wait 
 and see if it becomes one later down the line.
+
+![Enemy movement code](/github-portfolio/images/blog/EnemySpawner.PNG)
+
+![Enemy movement code](/github-portfolio/images/blog/EnemyScaling.PNG)
+
+

@@ -22,3 +22,6 @@ There are still improvements to be made on this feature, both visually and code 
 not spam your screen like they're doing now, but have them add up and increase the already existing damage pop
 up for that instance of damage. Which is what I'll be working on till the next devlog. Improve the visual
 clarity of the hit numbers both for player and enemy damage.
+
+
+![DamageNumbers code](/github-portfolio/images/blog/DamageNumbers.PNG)
